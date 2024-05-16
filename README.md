@@ -1,2 +1,4 @@
 # Expenses Management System
-# CRUD
+Utilizes CRUD operations  
+Technologies used: Node.js, React, SQL, Javascript, Express
+
