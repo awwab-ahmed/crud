@@ -19,12 +19,12 @@ app.get('/',(req,res) => {
 })
 
 app.post('/create',(req,res) => {
-    const sql = "INSERT INTO expense(name,cost,date,recurring) VALUES (?)";
+    const sql = "INSERT INTO expense (name,cost,date,recurring) VALUES (?)";
     const values = [
         req.body.name,
         req.body.cost,
         req.body.date,
-        req.body.recurring,
+        req.body.recurring
     ]
     db.query(sql,[values], (err, data) => {
         if(err){
@@ -40,7 +40,7 @@ app.put('/update/:id',(req,res) => {
         req.body.name,
         req.body.cost,
         req.body.date,
-        req.body.recurring,
+        req.body.recurring
     ]
     const id = req.params.id;
     db.query(sql, [...values, id],(err, data) => {

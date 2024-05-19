@@ -21,6 +21,7 @@ const Expenses = () => {
                         <th scope="col">Cost</th>
                         <th scope="col">Date Paid</th>
                         <th scope="col">Recurring Expense?</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,10 @@ const Expenses = () => {
                                 <td>{expense.cost}</td>
                                 <td>{expense.date}</td>
                                 <td>{expense.recurring}</td>
+                                <td>
+                                    <button type="button" className='btn btn-info btn-sm'>Update</button>
+                                    <button type="button" className='btn btn-danger btn-sm'>Delete</button>
+                                </td>
                             </tr>)
                     }
                 </tbody>
